@@ -1,0 +1,56 @@
+{% set version = "4.1" %}
+{% set sha256 = "7e8ae3a74fb6de27f7dc37332f9b9f02429e75f4c9aeaaa8b8744e6f7ce05c87" %}
+{% set tag = version %}
+
+package:
+  name: visan
+  version: {{ version }} 
+
+source:
+  url: https://github.com/stcorp/visan/archive/{{ tag }}.zip
+  sha256: {{ sha256 }}
+
+app:
+  entry: visan
+  icon: logo.png
+  summary: Visualization and Analysis application of the Atmospheric Toolbox
+
+build:
+  script_env:
+    - SDKROOT  # [osx]
+
+requirements:
+  build:
+    - cmake
+    - python
+    - vtk<9
+    - tbb-devel
+    - gcc_linux-64  # [linux]
+    - gxx_linux-64  # [linux]
+    - libice-devel-cos6-x86_64  # [linux]
+    - libselinux-cos6-x86_64  # [linux]
+    - libsm-devel-cos6-x86_64  # [linux]
+    - libuuid-devel-cos6-x86_64  # [linux]
+    - libx11-devel-cos6-x86_64  # [linux]
+    - libxau-cos6-x86_64  # [linux]
+    - libxcb-cos6-x86_64  # [linux]
+    - libxdamage-cos6-x86_64  # [linux]
+    - libxext-cos6-x86_64  # [linux]
+    - libxfixes-cos6-x86_64  # [linux]
+    - libxt-devel-cos6-x86_64  # [linux]
+    - libxxf86vm-cos6-x86_64  # [linux]
+    - mesa-dri-drivers-cos6-x86_64  # [linux]
+    - mesa-libgl-devel-cos6-x86_64  # [linux]
+
+  run:
+    - coda
+    - python
+    - numpy
+    - harp
+    - vtk
+    - wxpython
+
+about:
+  home: https://github.com/stcorp/visan
+  license: BSD
+  license_file: COPYING
