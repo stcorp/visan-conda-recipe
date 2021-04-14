@@ -16,6 +16,7 @@ app:
   summary: Visualization and Analysis application of the Atmospheric Toolbox
 
 build:
+  number: 0
   script_env:
     - SDKROOT  # [osx]
 
@@ -47,7 +48,7 @@ requirements:
     - python
     - numpy
     - harp
-    - vtk
+    - vtk<9
     - wxpython
 
 about:
