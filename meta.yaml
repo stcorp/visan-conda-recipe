@@ -36,7 +36,7 @@ requirements:
     - libxau-cos6-x86_64  # [linux]
     - libxcb-cos6-x86_64  # [linux]
     - libxdamage-cos6-x86_64  # [linux]
-    - libxext-cos6-x86_64  # [linux]
+    - libxext-devel-cos6-x86_64  # [linux]
     - libxfixes-cos6-x86_64  # [linux]
     - libxt-devel-cos6-x86_64  # [linux]
     - libxxf86vm-cos6-x86_64  # [linux]
