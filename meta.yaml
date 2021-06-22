@@ -1,5 +1,5 @@
-{% set version = "4.1" %}
-{% set sha256 = "7e8ae3a74fb6de27f7dc37332f9b9f02429e75f4c9aeaaa8b8744e6f7ce05c87" %}
+{% set version = "4.2" %}
+{% set sha256 = "92b99501db6c37abdaeba50409d08c81a78139cbd9eadb00025bcca1e1a560b0" %}
 {% set tag = version %}
 
 package:
@@ -24,8 +24,7 @@ requirements:
   build:
     - cmake
     - python
-    - vtk<9
-    - tbb-devel
+    - vtk
     - gcc_linux-64  # [linux]
     - gxx_linux-64  # [linux]
     - libice-devel-cos6-x86_64  # [linux]
@@ -48,7 +47,7 @@ requirements:
     - python
     - numpy
     - harp
-    - vtk<9
+    - vtk
     - wxpython
 
 about:
