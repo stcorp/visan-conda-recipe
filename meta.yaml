@@ -24,7 +24,7 @@ requirements:
   build:
     - cmake
     - python
-    - vtk
+    - vtk>=9
     - gcc_linux-64  # [linux]
     - gxx_linux-64  # [linux]
     - libice-devel-cos6-x86_64  # [linux]
@@ -47,7 +47,7 @@ requirements:
     - python
     - numpy
     - harp
-    - vtk
+    - vtk>=9
     - wxpython
 
 about:
